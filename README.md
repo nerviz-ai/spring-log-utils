@@ -24,7 +24,7 @@ This library simplifies logging in Spring applications, making it easier to moni
 To use this library in a Maven project, add the following dependency to your `pom.xml`:
 ```xml
 <dependency>
-    <groupId>io.github.ice-lfernandes</groupId>
+    <groupId>io.github.open-source-lfernandes</groupId>
     <artifactId>spring-log-utils</artifactId>
     <version>1.0.0</version>
 </dependency>
@@ -33,7 +33,7 @@ To use this library in a Maven project, add the following dependency to your `po
 ### Gradle
 To use this library in a Gradle project, add the following dependency to your `build.gradle`:
 ```groovy
-implementation 'io.github.ice-lfernandes:spring-log-utils:1.0.0'
+implementation 'io.github.open-source-lfernandes:spring-log-utils:1.0.0'
 ```
 
 ## Usage
