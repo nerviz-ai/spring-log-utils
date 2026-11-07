@@ -7,8 +7,8 @@ plugins {
 	id 'org.jreleaser' version '1.18.0'
 }
 
-group = 'io.github.open-source-lfernandes'
-version = '1.0.0'
+group = 'dev.nerviz'
+version = '2.0.0'
 
 java {
 	toolchain {
@@ -51,6 +51,7 @@ tasks.bootJar {
 
 tasks.jar {
 	enabled = true
+	archiveClassifier = ''
 }
 
 java {
@@ -71,7 +72,7 @@ publishing {
 			pom {
 				name = 'Spring Log Utils'
 				description = 'Utilities for Spring Boot logging'
-				url = 'https://github.com/open-source-lfernandes/spring-log-utils'
+				url = 'https://github.com/nerviz-ai/spring-log-utils'
 				licenses {
 					license {
 						name = 'Apache License 2.0'
@@ -86,9 +87,39 @@ publishing {
 					}
 				}
 				scm {
-					connection = 'scm:git:git://github.com/open-source-lfernandes/spring-log-utils.git'
-					developerConnection = 'scm:git:ssh://github.com:open-source-lfernandes/spring-log-utils.git'
-					url = 'https://github.com/open-source-lfernandes/spring-log-utils/tree/main'
+					connection = 'scm:git:git://github.com/nerviz-ai/spring-log-utils.git'
+					developerConnection = 'scm:git:ssh://github.com:nerviz-ai/spring-log-utils.git'
+					url = 'https://github.com/nerviz-ai/spring-log-utils/tree/main'
+				}
+			}
+		}
+	}
+}
+
+signing {
+	def signingKey = providers.environmentVariable('JRELEASER_GPG_SECRET_KEY')
+	def signingPassword = providers.environmentVariable('JRELEASER_GPG_PASSPHRASE')
+	required = signingKey.isPresent()
+	if (signingKey.isPresent()) {
+		useInMemoryPgpKeys(signingKey.get(), signingPassword.getOrNull())
+		sign publishing.publications.mavenJava
+	}
+}
+
+jreleaser {
+	gitRootSearch = true
+	signing {
+		active = 'ALWAYS'
+		armored = true
+		mode = 'MEMORY'
+	}
+	deploy {
+		maven {
+			mavenCentral {
+				sonatype {
+					active = 'ALWAYS'
+					url = 'https://central.sonatype.com/api/v1/publisher'
+					stagingRepository('build/staging-deploy')
 				}
 			}
 		}
