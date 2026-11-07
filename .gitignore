@@ -23,4 +23,21 @@ gradle.properties
 /gradle/plugins/
 /.jreleaser/
 
-.vscode/*
+.vscode/
+
+# secrets / signing
+.env
+.env.*
+*.gpg
+*.asc
+*.pgp
+*.key
+*.pem
+*.p12
+*.jks
+*.keystore
+secring.*
+local.properties
+.jreleaser/
+jreleaser/output/
+out/jreleaser/

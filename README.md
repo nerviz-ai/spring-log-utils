@@ -24,16 +24,16 @@ This library simplifies logging in Spring applications, making it easier to moni
 To use this library in a Maven project, add the following dependency to your `pom.xml`:
 ```xml
 <dependency>
-    <groupId>io.github.open-source-lfernandes</groupId>
+    <groupId>dev.nerviz</groupId>
     <artifactId>spring-log-utils</artifactId>
-    <version>2.0.0</version>
+    <version>3.0.0</version>
 </dependency>
 ```
 
 ### Gradle
 To use this library in a Gradle project, add the following dependency to your `build.gradle`:
 ```groovy
-implementation 'io.github.open-source-lfernandes:spring-log-utils:2.0.0'
+implementation 'dev.nerviz:spring-log-utils:3.0.0'
 ```
 
 ## Usage
@@ -67,8 +67,8 @@ public class GreetingController {
 ```
 #### Output Log Example
 ```plaintext
-2025-05-13 15:59:15 app=example-secret-app [http-nio-8080-exec-3] [:] io.github.ice_lfernandes.spring.log.utils.commons.LoggingCommonsMethods INFO  M=logInterceptJoinPoint, stage=init, method=getUsers, class=GreetingController, parameters=[]
-2025-05-13 15:59:15 app=example-secret-app [http-nio-8080-exec-3] [:] io.github.ice_lfernandes.spring.log.utils.commons.LoggingCommonsMethods INFO  M=logInterceptJoinPoint, stage=finish, method=getUsers, class=GreetingController, parameters=[], result=<200 OK OK,[User{email=******des***.com, name=**s****es, address=*a****o*45, age=**, birthDate=***5-13, phone=***9**9, document=********911}],[]>, time-execution=5ms
+2025-05-13 15:59:15 app=example-secret-app [http-nio-8080-exec-3] [:] dev.nerviz.spring.log.utils.commons.LoggingCommonsMethods INFO  M=logInterceptJoinPoint, stage=init, method=getUsers, class=GreetingController, parameters=[]
+2025-05-13 15:59:15 app=example-secret-app [http-nio-8080-exec-3] [:] dev.nerviz.spring.log.utils.commons.LoggingCommonsMethods INFO  M=logInterceptJoinPoint, stage=finish, method=getUsers, class=GreetingController, parameters=[], result=<200 OK OK,[User{email=******des***.com, name=**s****es, address=*a****o*45, age=**, birthDate=***5-13, phone=***9**9, document=********911}],[]>, time-execution=5ms
 ```
 
 ### `@LogExecution` Annotation
@@ -94,8 +94,8 @@ public class GreetingService {
 ```
 #### Output Log Example
 ```plaintext
-2025-05-13 16:22:08 app=example-secret-app [http-nio-8080-exec-1] [:] io.github.ice_lfernandes.spring.log.utils.commons.LoggingCommonsMethods INFO  M=logInterceptJoinPoint, stage=init, method=getUser, class=GreetingService, parameters=[1]
-2025-05-13 16:22:08 app=example-secret-app [http-nio-8080-exec-1] [:] io.github.ice_lfernandes.spring.log.utils.commons.LoggingCommonsMethods INFO  M=logInterceptJoinPoint, stage=finish, method=getUser, class=GreetingService, parameters=[1], result=User{email=******des***.com, name=**s****es, address=*a****o*45, age=**, birthDate=***5-13, phone=***9**9, document=********911}, time-execution=2ms
+2025-05-13 16:22:08 app=example-secret-app [http-nio-8080-exec-1] [:] dev.nerviz.spring.log.utils.commons.LoggingCommonsMethods INFO  M=logInterceptJoinPoint, stage=init, method=getUser, class=GreetingService, parameters=[1]
+2025-05-13 16:22:08 app=example-secret-app [http-nio-8080-exec-1] [:] dev.nerviz.spring.log.utils.commons.LoggingCommonsMethods INFO  M=logInterceptJoinPoint, stage=finish, method=getUser, class=GreetingService, parameters=[1], result=User{email=******des***.com, name=**s****es, address=*a****o*45, age=**, birthDate=***5-13, phone=***9**9, document=********911}, time-execution=2ms
 ```
 
 ### `@MaskSensitiveData` Annotation
