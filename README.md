@@ -26,14 +26,14 @@ To use this library in a Maven project, add the following dependency to your `po
 <dependency>
     <groupId>dev.nerviz</groupId>
     <artifactId>spring-log-utils</artifactId>
-    <version>2.0.0</version>
+    <version>3.0.0</version>
 </dependency>
 ```
 
 ### Gradle
 To use this library in a Gradle project, add the following dependency to your `build.gradle`:
 ```groovy
-implementation 'dev.nerviz:spring-log-utils:2.0.0'
+implementation 'dev.nerviz:spring-log-utils:3.0.0'
 ```
 
 ## Usage

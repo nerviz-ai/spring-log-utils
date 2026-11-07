@@ -62,13 +62,14 @@ public class LoggingCommonsMethods {
                 .append(logReturn ? "result={}, " : "")
                 .append("time-execution={}ms");
 
-        log.info(sbFinish.toString(),
-                joinPoint.getSignature().getName(),
-                joinPoint.getSignature().getDeclaringType().getSimpleName(),
-                joinPoint.getArgs(),
-                result,
-                timeElapsed
-        );
+        var finishArgs = new java.util.ArrayList<Object>();
+        finishArgs.add(joinPoint.getSignature().getName());
+        finishArgs.add(joinPoint.getSignature().getDeclaringType().getSimpleName());
+        if (logParameters) finishArgs.add(joinPoint.getArgs());
+        if (logReturn) finishArgs.add(result);
+        finishArgs.add(timeElapsed);
+
+        log.info(sbFinish.toString(), finishArgs.toArray());
 
         return result;
     }
