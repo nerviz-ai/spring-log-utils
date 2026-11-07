@@ -26,14 +26,14 @@ To use this library in a Maven project, add the following dependency to your `po
 <dependency>
     <groupId>io.github.open-source-lfernandes</groupId>
     <artifactId>spring-log-utils</artifactId>
-    <version>1.0.0</version>
+    <version>2.0.0</version>
 </dependency>
 ```
 
 ### Gradle
 To use this library in a Gradle project, add the following dependency to your `build.gradle`:
 ```groovy
-implementation 'io.github.open-source-lfernandes:spring-log-utils:1.0.0'
+implementation 'io.github.open-source-lfernandes:spring-log-utils:2.0.0'
 ```
 
 ## Usage
