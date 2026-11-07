@@ -1,7 +1,7 @@
-package io.github.ice_lfernandes.spring.log.utils.features.aspect;
+package dev.nerviz.spring.log.utils.features.aspect;
 
-import io.github.ice_lfernandes.spring.log.utils.commons.LoggingCommonsMethods;
-import io.github.ice_lfernandes.spring.log.utils.features.annotations.HttpMethodLogExecution;
+import dev.nerviz.spring.log.utils.commons.LoggingCommonsMethods;
+import dev.nerviz.spring.log.utils.features.annotations.HttpMethodLogExecution;
 import lombok.SneakyThrows;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -34,7 +34,7 @@ public class HttpMethodLogExecutionAspect {
      * @see HttpMethodLogExecution#logReturn()
      * @see HttpMethodLogExecution#logParameters()
      */
-    @Around("@annotation(io.github.ice_lfernandes.spring.log.utils.features.annotations.HttpMethodLogExecution)")
+    @Around("@annotation(dev.nerviz.spring.log.utils.features.annotations.HttpMethodLogExecution)")
     @SneakyThrows
     public Object logExecutionHttpMethod(ProceedingJoinPoint joinPoint) {
         MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();

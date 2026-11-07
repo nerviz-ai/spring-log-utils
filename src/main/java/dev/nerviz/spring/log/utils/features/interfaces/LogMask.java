@@ -1,8 +1,8 @@
-package io.github.ice_lfernandes.spring.log.utils.features.interfaces;
+package dev.nerviz.spring.log.utils.features.interfaces;
 
-import io.github.ice_lfernandes.spring.log.utils.features.enums.MaskedType;
-import io.github.ice_lfernandes.spring.log.utils.commons.LoggingCommonsMethods;
-import io.github.ice_lfernandes.spring.log.utils.features.annotations.MaskSensitiveData;
+import dev.nerviz.spring.log.utils.features.enums.MaskedType;
+import dev.nerviz.spring.log.utils.commons.LoggingCommonsMethods;
+import dev.nerviz.spring.log.utils.features.annotations.MaskSensitiveData;
 import lombok.SneakyThrows;
 import org.springframework.util.ReflectionUtils;
 

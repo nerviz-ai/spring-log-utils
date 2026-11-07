@@ -1,6 +1,6 @@
-package io.github.ice_lfernandes.spring.log.utils.commons;
+package dev.nerviz.spring.log.utils.commons;
 
-import io.github.ice_lfernandes.spring.log.utils.features.enums.MaskedType;
+import dev.nerviz.spring.log.utils.features.enums.MaskedType;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;

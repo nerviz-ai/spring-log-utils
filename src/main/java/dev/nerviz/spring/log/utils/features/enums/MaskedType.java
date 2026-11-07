@@ -1,4 +1,4 @@
-package io.github.ice_lfernandes.spring.log.utils.features.enums;
+package dev.nerviz.spring.log.utils.features.enums;
 
 import lombok.Getter;
 

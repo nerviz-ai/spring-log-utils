@@ -1,7 +1,7 @@
-package io.github.ice_lfernandes.spring.log.utils.features.aspect;
+package dev.nerviz.spring.log.utils.features.aspect;
 
-import io.github.ice_lfernandes.spring.log.utils.commons.LoggingCommonsMethods;
-import io.github.ice_lfernandes.spring.log.utils.properties.GlobalProperties;
+import dev.nerviz.spring.log.utils.commons.LoggingCommonsMethods;
+import dev.nerviz.spring.log.utils.properties.GlobalProperties;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import org.aspectj.lang.ProceedingJoinPoint;

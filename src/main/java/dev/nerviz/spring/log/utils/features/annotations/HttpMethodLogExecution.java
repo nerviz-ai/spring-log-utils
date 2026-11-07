@@ -1,4 +1,4 @@
-package io.github.ice_lfernandes.spring.log.utils.features.annotations;
+package dev.nerviz.spring.log.utils.features.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

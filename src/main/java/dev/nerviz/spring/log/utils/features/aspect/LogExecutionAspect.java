@@ -1,7 +1,7 @@
-package io.github.ice_lfernandes.spring.log.utils.features.aspect;
+package dev.nerviz.spring.log.utils.features.aspect;
 
-import io.github.ice_lfernandes.spring.log.utils.features.annotations.LogExecution;
-import io.github.ice_lfernandes.spring.log.utils.commons.LoggingCommonsMethods;
+import dev.nerviz.spring.log.utils.features.annotations.LogExecution;
+import dev.nerviz.spring.log.utils.commons.LoggingCommonsMethods;
 import lombok.SneakyThrows;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -37,7 +37,7 @@ public class LogExecutionAspect {
      * @return The result of the intercepted method execution
      * @see LoggingCommonsMethods#logInterceptJoinPoint
      */
-    @Around("@annotation(io.github.ice_lfernandes.spring.log.utils.features.annotations.LogExecution)")
+    @Around("@annotation(dev.nerviz.spring.log.utils.features.annotations.LogExecution)")
     @SneakyThrows
     public Object logExecution(ProceedingJoinPoint joinPoint) {
         MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();

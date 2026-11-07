@@ -1,4 +1,4 @@
-package io.github.ice_lfernandes.spring.log.utils.commons;
+package dev.nerviz.spring.log.utils.commons;
 
 import lombok.SneakyThrows;
 import lombok.experimental.UtilityClass;
