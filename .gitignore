@@ -22,3 +22,5 @@ gradle.properties
 
 /gradle/plugins/
 /.jreleaser/
+
+.vscode/*
