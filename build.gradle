@@ -51,6 +51,7 @@ tasks.bootJar {
 
 tasks.jar {
 	enabled = true
+	archiveClassifier = ''
 }
 
 java {
@@ -89,6 +90,36 @@ publishing {
 					connection = 'scm:git:git://github.com/nerviz-ai/spring-log-utils.git'
 					developerConnection = 'scm:git:ssh://github.com:nerviz-ai/spring-log-utils.git'
 					url = 'https://github.com/nerviz-ai/spring-log-utils/tree/main'
+				}
+			}
+		}
+	}
+}
+
+signing {
+	def signingKey = providers.environmentVariable('JRELEASER_GPG_SECRET_KEY')
+	def signingPassword = providers.environmentVariable('JRELEASER_GPG_PASSPHRASE')
+	required = signingKey.isPresent()
+	if (signingKey.isPresent()) {
+		useInMemoryPgpKeys(signingKey.get(), signingPassword.getOrNull())
+		sign publishing.publications.mavenJava
+	}
+}
+
+jreleaser {
+	gitRootSearch = true
+	signing {
+		active = 'ALWAYS'
+		armored = true
+		mode = 'MEMORY'
+	}
+	deploy {
+		maven {
+			mavenCentral {
+				sonatype {
+					active = 'ALWAYS'
+					url = 'https://central.sonatype.com/api/v1/publisher'
+					stagingRepository('build/staging-deploy')
 				}
 			}
 		}
